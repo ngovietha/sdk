@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by NQC on 5/26/20 7:33 AM
+  ~  Copyright© 2020 NQC. All Rights Reserved.
+  ~  Last modified 5/26/20 6:58 AM
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="measureType"
+            type="com.nqc.idoctor.home.data.local.dao.MeasureType" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/element_spacing_large"
+        android:layout_marginBottom="@dimen/element_spacing_large">
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/element_spacing_large">
+
+            <ImageView
+                android:id="@+id/imvIcon"
+                android:layout_width="@dimen/view_size_normal"
+                android:layout_height="@dimen/view_size_normal"
+                android:layout_marginBottom="@dimen/element_spacing_large"
+                android:scaleType="centerInside"
+                android:tint="@color/color_main_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/element_spacing_large"
+                android:text="@{measureType.nameStatus}"
+                android:textColor="@color/color_main_white"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

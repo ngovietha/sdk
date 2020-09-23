@@ -1,0 +1,66 @@
+<!--
+  ~ Created by NQC on 4/26/20 2:50 AM
+  ~  Copyright© 2020 NQC. All Rights Reserved.
+  ~  Last modified 4/21/20 9:28 PM
+  ~
+  -->
+
+<resources>
+
+  <!-- Element Spacing -->
+  <dimen name="element_spacing_x_huge">88dp</dimen>
+  <dimen name="element_spacing_huge">72dp</dimen>
+  <dimen name="element_spacing_xxx_large">64dp</dimen>
+  <dimen name="element_spacing_xx_large">32dp</dimen>
+  <dimen name="element_spacing_xlarge">24dp</dimen>
+  <dimen name="element_spacing_large">16dp</dimen>
+  <dimen name="element_spacing_x_normal">12dp</dimen>
+  <dimen name="element_spacing_normal">8dp</dimen>
+  <dimen name="element_spacing_x_small">6dp</dimen>
+  <dimen name="element_spacing_small">4dp</dimen>
+  <dimen name="element_spacing_tiny">2dp</dimen>
+  <dimen name="element_spacing_none">0dp</dimen>
+
+  <!-- View Size -->
+  <dimen name="view_size_xx_huge">104dp</dimen>
+  <dimen name="view_size_x_huge">96dp</dimen>
+  <dimen name="view_size_huge">88dp</dimen>
+  <dimen name="view_size_xxx_large">80dp</dimen>
+  <dimen name="view_size_xx_large">72dp</dimen>
+  <dimen name="view_size_xlarge">64dp</dimen>
+  <dimen name="view_size_large">56dp</dimen>
+  <dimen name="view_size_normal">48dp</dimen>
+  <dimen name="view_size_small">36dp</dimen>
+  <dimen name="view_size_x_tiny">32dp</dimen>
+  <dimen name="view_size_tiny">24dp</dimen>
+  <dimen name="view_size_divider">1dp</dimen>
+
+
+  <!-- Text Size -->
+  <dimen name="text_size_xx_huge">84sp</dimen>
+  <dimen name="text_size_x_huge">72sp</dimen>
+  <dimen name="text_size_huge">60sp</dimen>
+  <dimen name="text_size_xxx_large">48sp</dimen>
+  <dimen name="text_size_xx_large">36sp</dimen>
+  <dimen name="text_size_xlarge">24sp</dimen>
+  <dimen name="text_size_large">21sp</dimen>
+  <dimen name="text_size_medium">18sp</dimen>
+  <dimen name="text_size_small">16sp</dimen>
+  <dimen name="text_size_smaller">14sp</dimen>
+  <dimen name="text_size_micro">8sp</dimen>
+
+  <!--conner-->
+  <dimen name="element_conner_xx_normal">16dp</dimen>
+  <dimen name="element_conner_x_normal">12dp</dimen>
+  <dimen name="element_conner_normal">8dp</dimen>
+  <dimen name="element_conner_x_small">6dp</dimen>
+  <dimen name="element_conner_small">4dp</dimen>
+  <dimen name="element_conner_tiny">2dp</dimen>
+  <dimen name="element_conner_none">0dp</dimen>
+
+  <!--stroke size-->
+  <dimen name="stroke_tiny">1dp</dimen>
+  <dimen name="stroke_small">3dp</dimen>
+
+  <dimen name="item_round">5dp</dimen>
+</resources>

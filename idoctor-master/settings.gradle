@@ -1,0 +1,9 @@
+/*
+ * Created by NQC on 4/25/20 7:25 PM
+ *  Copyright© 2020 NQC. All Rights Reserved.
+ *  Last modified 4/25/20 7:25 PM
+ *
+ */
+
+rootProject.name='BaseAndroid'
+include ':app'

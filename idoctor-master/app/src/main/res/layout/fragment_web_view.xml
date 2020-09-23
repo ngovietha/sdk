@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Created by NQC on 5/4/20 10:59 AM
+  ~  Copyright© 2020 NQC. All Rights Reserved.
+  ~  Last modified 5/4/20 10:30 AM
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundPrimary"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/wvHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

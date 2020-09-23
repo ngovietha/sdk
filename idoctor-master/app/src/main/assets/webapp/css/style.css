@@ -1,0 +1,174 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 15, 2020, 9:47:46 AM
+    Author     : share
+*/
+
+
+
+.btn {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    line-height: 0;
+    font-size: 24px;
+    border-radius: 2em;
+    border: none;
+    vertical-align: middle;
+    opacity: .87;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0.333em;
+}
+
+.btn.square {
+    padding: 8px 16px;
+    font: inherit;
+    /* font-weight: bold; */
+    border-radius: 2px;
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.btn.btn-danger {
+    background-color: #F8392F;
+    color: #FFF;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.btn.btn-default {
+    color: white;
+    background-color: #212121;
+}
+
+.btn.btn-success {
+    color: white;
+    background-color: #62B865;
+}
+
+body .container {
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2A2B2C;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.icon-switch-camera {
+    background-position: center;
+    background-image: url(../images/icon-camera.png);
+    background-repeat: no-repeat;
+    min-width: 30px;
+    min-height: 30px;
+    display: inline-block;
+}
+
+.btn.btn-default.btn-icon:focus {
+    outline: none;
+    background: transparent;
+}
+
+#video-conference {
+    object-fit: contain; 
+    overflow: hidden; 
+    width: auto;
+    background: #2A2B2C;
+    opacity: 0;
+}
+
+#box-camera {
+    object-fit: contain;
+    overflow: hidden;
+    width: 145px;
+    height: 160px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.mobile #box-camera {
+    width: 150px;
+    height: 200px;
+}
+
+#video-camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#btn-end-call {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+
+#btn-switch-camera {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: transparent;
+    padding: 0;
+    height: 30px;
+}
+
+#book {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    background: #FFF;
+}
+
+#book h1,#book h4, #book h5 {
+    margin: 0;
+}
+
+#book > .title {
+    margin: 0;
+    font-size: 15pt;
+    padding: 10px;
+    background: #3F51B5;
+    color: #FFF;
+}
+
+#book .box {
+    padding: 5px 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+#book .box > h4 {
+    margin-bottom: 3px;
+}
+
+
+#book .box > h5 {
+    font-weight: normal;
+}
+
+.mobile #video-camera {
+    transform: scaleX(-1);
+}
+

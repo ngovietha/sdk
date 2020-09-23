@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by NQC on 5/5/20 12:40 AM
+  ~  Copyright© 2020 NQC. All Rights Reserved.
+  ~  Last modified 5/4/20 11:45 PM
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/element_conner_tiny" />
+    <solid android:color="@color/colorPrimaryLight" />
+</shape>

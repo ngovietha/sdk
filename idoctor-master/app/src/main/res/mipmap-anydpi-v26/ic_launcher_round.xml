@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by NQC on 4/25/20 7:25 PM
+  ~  Copyright© 2020 NQC. All Rights Reserved.
+  ~  Last modified 4/25/20 7:25 PM
+  ~
+  -->
+
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>

@@ -1,0 +1,167 @@
+/*
+ * Created by NQC on 4/25/20 7:25 PM
+ *  Copyright© 2020 NQC. All Rights Reserved.
+ *  Last modified 4/25/20 7:25 PM
+ *
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.nqc.baseandroid"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+
+        product {
+            try {
+                storeFile file("../key-release/baseAndroid.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            }
+            catch (ignored) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+
+        staging {
+            try {
+                storeFile file("../key-release/baseAndroid.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            }
+            catch (ignored) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+
+    buildTypes {
+
+        product {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"http://localhost:8080"'
+            buildConfigField "String", "WEB_URL", '"http://localhost:8080"'
+            debuggable false
+            signingConfig signingConfigs.product
+        }
+        staging {
+            buildConfigField "String", "BASE_URL", '"http://"'
+            buildConfigField "String", "WEB_URL", '"http://"'
+            debuggable true
+            signingConfig signingConfigs.staging
+        }
+
+        develop {
+            buildConfigField "String", "BASE_URL", '"http://localhost:8080"'
+            buildConfigField "String", "WEB_URL", '"http://localhost:8080"'
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+    }
+
+}
+
+dependencies {
+
+    final RETROFIT_VERSION = '2.3.0'
+    final RETROFIT_GSON_VERSION = '2.5.0'
+    final RETROFIT_HTTP_VERSION = '3.14.1'
+    final DAGGER_VERSION = '2.16'
+    final RX_RELAY_VERSION = "2.1.0"
+    final RX_JAVA_VERSION = "2.2.9"
+    final RX_ANDROID_VERSION = "2.1.1"
+    final TIMBER_VERSION = "4.7.1"
+    final ROOM_DB_VERSION = "2.2.5"
+    final GLIDE_VERSION = "4.11.0"
+    final ANDROIDX_VERSION = "1.1.0"
+    final ANDROIDX_MATERIAL_VERSION = "1.1.0"
+    final ANDROIDX_CONSTRAINT_VERSION = "1.1.3"
+    final FRAG_NAV = "2.4.0"
+    final ANDROIDX_LIFECYCLE_VERSION = "2.2.0"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+
+    // Android Support Library dependecies
+    implementation "androidx.appcompat:appcompat:$ANDROIDX_VERSION"
+    implementation "com.google.android.material:material:$ANDROIDX_MATERIAL_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$ANDROIDX_CONSTRAINT_VERSION"
+    implementation "androidx.recyclerview:recyclerview:$ANDROIDX_MATERIAL_VERSION"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_GSON_VERSION"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$RETROFIT_HTTP_VERSION"
+    implementation "com.squareup.okhttp3:logging-interceptor:$RETROFIT_HTTP_VERSION"
+    implementation "com.squareup.okhttp3:mockwebserver:$RETROFIT_HTTP_VERSION"
+
+    // RxJava / RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:$RX_JAVA_VERSION"
+    implementation "io.reactivex.rxjava2:rxandroid:$RX_ANDROID_VERSION"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$RX_RELAY_VERSION"
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger:$DAGGER_VERSION"
+    annotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    //Don't update this version.
+    implementation "com.google.dagger:dagger-android-support:$DAGGER_VERSION"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$TIMBER_VERSION"
+
+    // Room SQLite for data persistence
+    implementation "androidx.room:room-runtime:$ROOM_DB_VERSION"
+    annotationProcessor "androidx.room:room-compiler:$ROOM_DB_VERSION"
+
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$ROOM_DB_VERSION"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$GLIDE_VERSION"
+
+    //Frag Nav
+    implementation "com.ncapdevi:frag-nav:$FRAG_NAV"
+
+    // Android Architecture Components
+    implementation "androidx.lifecycle:lifecycle-extensions:$ANDROIDX_LIFECYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$ANDROIDX_LIFECYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$ANDROIDX_LIFECYCLE_VERSION"
+    implementation files('libs\\CreativeHealth_SpotCheck.jar')
+}
